@@ -57,6 +57,11 @@ nav ul li a {
   color: var(--dark-grayish-blue);
 }
 
+nav ul li a:hover {
+  color: var(--soft-red);
+  transition: 0.2s ease;
+}
+
 .info_col {
   display: flex;
   flex-direction: row;
@@ -71,13 +76,26 @@ nav ul li a {
   display: none;
 }
 
+.large_button:hover {
+  background-color: var(--very-dark-blue);
+  cursor: pointer;
+  transition: 0.2s ease;
+}
+
 .info_row_1 {
   flex: 3;
   height: 500px;
 }
 
 .info_row_1 img {
+}
+
+.banner_desktop_img {
   width: 100%;
+}
+
+.banner_mobile_img {
+  display: none;
 }
 
 .info_banner_col {
@@ -195,13 +213,92 @@ nav ul li a {
   padding-right: 2em;
 }
 
+.mobile_sidebar {
+  position: fixed;
+  visibility: hidden;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: hsla(0, 0%, 0%, 0.533);
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  align-items: flex-start;
+  overflow-y: hidden;
+}
+
+@keyframes slideIn {
+  from {
+    margin-left: 100%;
+  }
+  to {
+    margin-left: 0%;
+  }
+}
+
+@keyframes slideOut {
+  from {
+    margin-left: 0%;
+  }
+  to {
+    margin-left: 100%;
+  }
+}
+
+.mobile_sidebar_clicked {
+  visibility: visible;
+}
+
+.mobile_sidebar_clicked div {
+  animation: slideIn 0.5s ease-out;
+}
+
+.mobile_sidebar div {
+  width: 60%;
+  background: var(--off-white);
+  height: 100%;
+  overflow-y: hidden;
+}
+
+.mobile_sidebar div button {
+  position: absolute;
+  top: 0;
+  right: 0;
+  margin: 2em;
+  border: none;
+  background-color: white;
+}
+
+.mobile_sidebar div {
+  position: relative;
+}
+
+.mobile_sidebar div ul {
+  margin-top: 6em;
+  padding: 0em 3em;
+  display: flex;
+  flex-direction: column;
+  gap: 1em;
+  list-style-type: none;
+}
+
+.mobile_sidebar div ul li a {
+  color: var(--dark-grayish-blue);
+  text-decoration: none;
+}
+
 @media (max-width: 783px) {
   nav {
-    margin: 2em;
+    margin: 1em;
   }
 
   nav ul {
     display: none;
+  }
+
+  .icon_button {
+    display: flex;
   }
 
   .info_col {
@@ -209,7 +306,41 @@ nav ul li a {
     flex-direction: column;
   }
 
-  .icon_button {
+  .info_banner_col {
     display: flex;
+    flex-direction: column;
+    justify-content: start;
+    align-items: start;
+  }
+
+  .info_row_1 img {
+    flex: 1;
+  }
+
+  .info_col {
+    margin: 1em;
+  }
+
+  .more_articles_col {
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    align-items: start;
+    gap: 1em;
+    margin: 1em;
+  }
+
+  .banner_mobile_img {
+    display: flex;
+    width: 100%;
+    margin-top: 1em;
+  }
+
+  .banner_desktop_img {
+    display: none;
+  }
+
+  .info_row_2 {
+    padding: 1em;
   }
 }

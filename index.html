@@ -25,6 +25,7 @@
       }
     </style>
     <link rel="stylesheet" href="style.css" />
+    <script src="./script.js" defer></script>
   </head>
   <body>
     <nav>
@@ -39,15 +40,40 @@
       </ul>
 
       <button class="icon_button">
-        <img src="./assets/images/icon-menu.svg" alt="">
+        <img src="./assets/images/icon-menu.svg" alt="" />
       </button>
     </nav>
+
+    <div class="mobile_sidebar">
+      <div>
+        <button class="mobile_sidebar_close_button">
+          <img src="./assets/images/icon-menu-close.svg" alt="" />
+        </button>
+
+        <ul>
+          <li><a href="#">Home</a></li>
+          <li><a href="#">New</a></li>
+          <li><a href="#">Popular</a></li>
+          <li><a href="#">Trending</a></li>
+          <li><a href="#">Categories</a></li>
+        </ul>
+      </div>
+    </div>
 
     <main>
       <div class="info_col">
         <div class="info_row_1">
           <!-- banner -->
-          <img src="./assets/images/image-web-3-desktop.jpg" alt="" />
+          <img
+            src="./assets/images/image-web-3-desktop.jpg"
+            class="banner_desktop_img"
+            alt=""
+          />
+          <img
+            src="./assets/images/image-web-3-mobile.jpg"
+            class="banner_mobile_img"
+            alt=""
+          />
 
           <!-- info_banner -->
           <div class="info_banner_col">
@@ -128,16 +154,5 @@
         </div>
       </div>
     </main>
-
-    <!--       01
-      02
-      03  
-
-    <div class="attribution">
-      Challenge by
-      <a href="https://www.frontendmentor.io?ref=challenge" target="_blank"
-        >Frontend Mentor</a
-      >. Coded by <a href="#">Your Name Here</a>.
-    </div> -->
   </body>
 </html>
