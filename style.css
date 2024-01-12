@@ -65,19 +65,10 @@ nav ul li a {
   margin: 3em 6em;
 }
 
-@media (max-width: 783px) {
-  nav {
-    margin: 2em;
-  }
-
-  nav ul {
-    display: none;
-  }
-
-  .info_col {
-    display: flex;
-    flex-direction: column;
-  }
+.icon_button {
+  background-color: white;
+  border: none;
+  display: none;
 }
 
 .info_row_1 {
@@ -202,4 +193,23 @@ nav ul li a {
 
 .more_articles_row div p {
   padding-right: 2em;
+}
+
+@media (max-width: 783px) {
+  nav {
+    margin: 2em;
+  }
+
+  nav ul {
+    display: none;
+  }
+
+  .info_col {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .icon_button {
+    display: flex;
+  }
 }
